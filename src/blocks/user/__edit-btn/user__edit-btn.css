@@ -1,4 +1,7 @@
 .user__edit-btn {
+  position: absolute;
+  top: 0;
+  right: 45%;
   width: 30px;
   height: 30px;
   border: none;
@@ -7,6 +10,8 @@
 }
 @media screen and (max-width: 600px) {
   .user__edit-btn {
+    right: 30%;
+    top: -10px;
     background-position: center 14px;
     background-size: 16px;
   }

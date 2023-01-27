@@ -1,5 +1,6 @@
 .element__img-add {
   width: 14%;
+  height: 13%;
   padding: 10%;
   margin: 0 auto 5% auto;
   border: 3px white solid;
@@ -10,5 +11,6 @@
 @media screen and (max-width: 600px) {
   .element__img-add {
     border: 2px white solid;
+    height: 12%;
   }
 }

@@ -10,7 +10,7 @@ export default function Main() {
         </div>
         <div className="user__text">
           <div>
-            <h1 className="user__name">Кариночкаaaaaaaaaaaaaaa</h1>
+            <h1 className="user__name">Кариночка</h1>
             <button type="button" className="user__edit-btn"></button>
           </div>
           <ul className="user__description">
@@ -42,7 +42,7 @@ export default function Main() {
               <button type="button" className="element__delete-btn"></button>
               <div className="element__caption">
                 <p className="element__name">Дракула</p>
-                <p className="element__author">Стивен Кинг</p>
+                <p className="element__author">Не Стивен Кинг</p>
               </div>
             </article>
           </li>
@@ -57,7 +57,7 @@ export default function Main() {
               <button type="button" className="element__delete-btn"></button>
               <div className="element__caption">
                 <p className="element__name">Дракула</p>
-                <p className="element__author">Стивен Кинг</p>
+                <p className="element__author">Не Стивен Кинг</p>
               </div>
             </article>
           </li>
