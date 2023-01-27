@@ -47,6 +47,21 @@ export default function Main() {
             </article>
           </li>
 
+          <li className="elements__list-item">
+            <article className="element">
+              <img
+                src={defaultPub}
+                alt="публикация"
+                className="element__img"
+              />
+              <button type="button" className="element__delete-btn"></button>
+              <div className="element__caption">
+                <p className="element__name">Дракула</p>
+                <p className="element__author">Стивен Кинг</p>
+              </div>
+            </article>
+          </li>
+
         </ul>
       </section>
     </>

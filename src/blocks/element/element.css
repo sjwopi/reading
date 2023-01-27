@@ -1,14 +1,27 @@
 .element {
   width: 282px;
   height: auto;
-  aspect-ratio: 1/1;
   background-color: white;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   position: relative;
+  aspect-ratio: 1/1;
+  @supports not (aspect-ratio: 1/1) {
+    &::before {
+      float: left;
+      padding-top: 100%;
+      content: "";
+    }
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+  }
 }
+
 @media screen and (max-width: 1024px) {
   .element {
     width: 100%;
