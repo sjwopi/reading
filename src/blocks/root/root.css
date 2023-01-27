@@ -1,0 +1,15 @@
+.root {
+  --color-dark: #242424;
+  --color-gray: #5c5c5c;
+  --color-light: #faf1d9;
+  --color-white: #ffffff;
+  background-color: var(--color-light);
+  font-family: 'Inter';
+  color: black;
+  margin: 0 5%;
+}
+@media screen and (max-width: 600px) {
+  .root {
+    margin: 0;
+  }
+}

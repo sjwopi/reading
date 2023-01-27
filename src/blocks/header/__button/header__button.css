@@ -1,0 +1,5 @@
+.header__button {
+  height: 35px;
+  width: 30px;
+  background: url(../../../img/setting-logo.png) center/contain no-repeat;
+}

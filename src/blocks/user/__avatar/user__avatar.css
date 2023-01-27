@@ -1,0 +1,25 @@
+.user__avatar {
+  width: 110px;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.user__avatar-btn {
+  margin: 0 42px 0 0;
+}
+@media screen and (max-width: 900px) {
+  .user__avatar {
+    width: 90px;
+  }
+  .user__avatar-btn {
+    margin: 0 30px 0 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  .user__avatar {
+    width: 80px;
+  }
+  .user__avatar-btn {
+    margin: 0 20px 0 0;
+  }
+}

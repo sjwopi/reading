@@ -1,0 +1,14 @@
+.user {
+  max-width: 780px;
+  padding: 0;
+  margin: 0 auto 50px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 950px) {
+  .user {
+    margin: 0 5% 30px 5%;
+  }
+}

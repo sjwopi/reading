@@ -1,0 +1,13 @@
+.header {
+  max-width: 980px;
+  margin: 10px auto 20px auto;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px var(--color-gray) solid;
+}
+@media screen and (max-width: 600px) {
+  .header {
+    margin: 10px 5%;
+  }
+}

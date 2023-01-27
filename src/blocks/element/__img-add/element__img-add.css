@@ -1,0 +1,15 @@
+.element__img-add {
+  width: 14%;
+  padding: 10%;
+  margin: 0 auto 5% auto;
+  aspect-ratio: 1/1;
+  border: 3px white solid;
+  border-radius: 50%;
+  filter: invert(0.9);
+  z-index: 3;
+}
+@media screen and (max-width: 800px) {
+  .element__img-add {
+    border: 2px white solid;
+  }
+}
