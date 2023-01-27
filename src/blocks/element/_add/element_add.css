@@ -1,5 +1,7 @@
 .element_add {
-  padding: 20% 10% 0 10%;
+  width: calc(100% - 16%);
+  height: calc(100% - 20%);
+  padding: 20% 8% 0 8%;
   background-color: var(--color-light);
   box-shadow: 0 0 20px  rgba(80, 80, 80, 0.2) inset;
 }

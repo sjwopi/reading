@@ -1,7 +1,8 @@
 .elements__list-item {
   max-width: 282px;
+  padding: 100% 0 0 0;
+  position: relative;
   margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
 }
