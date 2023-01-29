@@ -1,9 +1,27 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 import addButton from '../../img/add-btn.svg';
-import defaultAvatar from '../../img/avatar.png'
-import defaultPub from '../../img/img-for-add.jpg'
-export default function Main() {
+import defaultAvatar from '../../img/avatar.png';
+import defaultPub from '../../img/img-for-add.jpg';
+
+import Header from './Header';
+import Nav from '../Nav';
+import Setting from './Setting';
+
+export default function Profile() {
+  const [isOpenSetting, setIsOpenSetting] = React.useState(false);
+
+  function handleOpenSetting() {
+    console.log('adsf')
+    setIsOpenSetting(true);
+  }
+  function closeAllPopups() {
+    setIsOpenSetting(false);
+  }
   return (
     <>
+      <Header onClick={handleOpenSetting} />
       <section className="user">
         <div className="user__avatar-btn">
           <img src={defaultAvatar} alt="аватарка" className="user__avatar" />
@@ -14,31 +32,28 @@ export default function Main() {
             <button type="button" className="user__edit-btn"></button>
           </div>
           <ul className="user__description">
-            <li><p className="user__description-title">Любимые жанры:</p></li>
+            <li>
+              <p className="user__description-title">Любимые жанры:</p>
+            </li>
           </ul>
         </div>
       </section>
       <section className="elements">
         <ul className="elements__list">
           <li className="elements__list-item">
-            <article className="element element_add">
+            <Link to="/" className="element element_add">
               <img
                 src={addButton}
                 alt="кнопка добавления публикации"
                 className="element__img-add"
               />
               <p className="element__text-add">Добавить книгу</p>
-            </article>
+            </Link>
           </li>
-          
 
           <li className="elements__list-item">
             <article className="element">
-              <img
-                src={defaultPub}
-                alt="публикация"
-                className="element__img"
-              />
+              <img src={defaultPub} alt="публикация" className="element__img" />
               <button type="button" className="element__delete-btn"></button>
               <div className="element__caption">
                 <p className="element__name">Дракула</p>
@@ -49,11 +64,7 @@ export default function Main() {
 
           <li className="elements__list-item">
             <article className="element">
-              <img
-                src={defaultPub}
-                alt="публикация"
-                className="element__img"
-              />
+              <img src={defaultPub} alt="публикация" className="element__img" />
               <button type="button" className="element__delete-btn"></button>
               <div className="element__caption">
                 <p className="element__name">Дракула</p>
@@ -61,9 +72,12 @@ export default function Main() {
               </div>
             </article>
           </li>
-
         </ul>
       </section>
+
+      <Nav />
+
+      <Setting isOpen={isOpenSetting} onCloseOverlay={closeAllPopups} />
     </>
   );
 }

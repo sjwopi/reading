@@ -1,0 +1,16 @@
+.popup__container-setting {
+  display: flex;
+  position: fixed;
+  top: -25px;
+  right: -300px;
+  width: 300px;
+  height: 130px;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: white;
+  transform: rotate(45deg);
+  transition: all .2s ease-in-out;
+}
+.popup__container-setting_opened {
+  right: -120px;
+}

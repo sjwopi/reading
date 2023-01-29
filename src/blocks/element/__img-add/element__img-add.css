@@ -6,7 +6,7 @@
   border: 3px white solid;
   border-radius: 50%;
   filter: invert(0.9);
-  z-index: 3;
+  z-index: 1;
 }
 @media screen and (max-width: 600px) {
   .element__img-add {

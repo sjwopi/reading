@@ -1,0 +1,19 @@
+.nav {
+  max-width: 980px;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px black solid;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 600px) {
+  .nav {
+    height: 50px;
+  }
+}

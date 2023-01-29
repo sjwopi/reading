@@ -1,0 +1,13 @@
+.nav__link {
+  height: 28px;
+  width: 28px;
+}
+.nav__link_home {
+ background: url(../../../img/home.png) center/contain no-repeat;
+}
+.nav__link_messenger {
+  background: url(../../../img/messenger.png) center/contain no-repeat;
+ }
+ .nav__link_profile {
+  background: url(../../../img/profile-icon.png) center/contain no-repeat;
+ }

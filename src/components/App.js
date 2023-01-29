@@ -1,13 +1,53 @@
 import React from 'react';
-import Header from './Profile/Header';
-import Main from './Profile/Main';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import Profile from './user/Profile';
+import Messenger from './messenger/Messenger';
+import Nav from './Nav';
 
 export default function App() {
-
   return (
     <>
-      <Header />
-      <Main />
+      <Routes>
+        <Route
+          path="/profile"
+          element={
+            <>
+              <Profile />
+            </>
+          }
+        />
+        <Route
+          path="/messenger"
+          element={
+            <> 
+              <Messenger />
+              <Nav />
+            </>
+          }
+        />
+        <Route
+          path="/home"
+          element={
+            <>
+              <Nav />
+            </>
+          }
+        />
+        <Route
+          path="/add-card"
+          element={
+            <> 
+            </>
+          }
+        />
+        <Route
+          path="/edit-profile"
+          element={
+            <> 
+            </>
+          }
+        />
+      </Routes>
     </>
   );
 }
