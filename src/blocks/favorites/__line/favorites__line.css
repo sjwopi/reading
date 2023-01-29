@@ -1,0 +1,10 @@
+.favorites__line {
+  max-width: 980px;
+  margin: 0 auto 20px auto;
+  border-bottom: 1px black solid;
+}
+@media screen and (max-width: 600px) {
+  .favorites__line {
+    margin: 10px 5%;
+  }
+}

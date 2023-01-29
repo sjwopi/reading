@@ -1,13 +1,13 @@
 .user__edit-btn {
   width: 30px;
-  height: 30px;
+  height: 39px;
   border: none;
-  background: url(../../../img/edit-button.svg) center 10px/20px no-repeat;
+  background: url(../../../img/edit-button.svg) center 0/20px no-repeat;
   filter: invert(1);
 }
 @media screen and (max-width: 600px) {
   .user__edit-btn {
-    background-position: center 14px;
+    background-position: center 12px;
     background-size: 16px;
   }
 }

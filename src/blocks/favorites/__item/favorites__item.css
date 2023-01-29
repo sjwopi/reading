@@ -1,0 +1,12 @@
+.favorites__item {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+@media screen and (max-width: 600px) {
+  .favorites__item {
+    height: 50px;
+    width: 50px;
+  }
+}

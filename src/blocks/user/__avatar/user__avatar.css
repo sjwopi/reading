@@ -15,9 +15,9 @@
     margin: 0 30px 0 0;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
   .user__avatar {
-    width: 80px;
+    width: 70px;
   }
   .user__avatar-btn {
     margin: 0 20px 0 0;

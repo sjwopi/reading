@@ -1,27 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
+import CardFromProfile from './CardFromProfile';
 
 import addButton from '../../img/add-btn.svg';
 import defaultAvatar from '../../img/avatar.png';
-import defaultPub from '../../img/img-for-add.jpg';
 
-import Header from './Header';
-import Nav from '../Nav';
-import Setting from './Setting';
+import { cards } from '../../utils/cards';
+import user from '../../utils/user';
 
-export default function Profile() {
-  const [isOpenSetting, setIsOpenSetting] = React.useState(false);
-
-  function handleOpenSetting() {
-    console.log('adsf')
-    setIsOpenSetting(true);
-  }
-  function closeAllPopups() {
-    setIsOpenSetting(false);
+export default function Profile({ onOpenSetting }) {
+  
+  function onCardOpen(card) {
+    console.log(card)
   }
   return (
     <>
-      <Header onClick={handleOpenSetting} />
+      <Header onClick={onOpenSetting} />
       <section className="user">
         <div className="user__avatar-btn">
           <img src={defaultAvatar} alt="аватарка" className="user__avatar" />
@@ -33,7 +28,9 @@ export default function Profile() {
           </div>
           <ul className="user__description">
             <li>
-              <p className="user__description-title">Любимые жанры:</p>
+              <p className="user__description-title">Прочтенных книг: <span className='user__description-title_info'>{user.countBook}</span></p>
+              <p className="user__description-title">Любимый автор: <span className='user__description-title_info'>{user.favoriteAuthor}</span></p>
+              <p className="user__description-title">Любимая книга: <span className='user__description-title_info'>{user.favoriteBook}</span></p>
             </li>
           </ul>
         </div>
@@ -50,34 +47,17 @@ export default function Profile() {
               <p className="element__text-add">Добавить книгу</p>
             </Link>
           </li>
-
-          <li className="elements__list-item">
-            <article className="element">
-              <img src={defaultPub} alt="публикация" className="element__img" />
-              <button type="button" className="element__delete-btn"></button>
-              <div className="element__caption">
-                <p className="element__name">Дракула</p>
-                <p className="element__author">Не Стивен Кинг</p>
-              </div>
-            </article>
-          </li>
-
-          <li className="elements__list-item">
-            <article className="element">
-              <img src={defaultPub} alt="публикация" className="element__img" />
-              <button type="button" className="element__delete-btn"></button>
-              <div className="element__caption">
-                <p className="element__name">Дракула</p>
-                <p className="element__author">Не Стивен Кинг</p>
-              </div>
-            </article>
-          </li>
+          
+          {cards.map((card) => (
+            <CardFromProfile
+             key={card._id}
+             card={card}
+             onCardOpen={onCardOpen}
+            />
+          ))}
         </ul>
       </section>
 
-      <Nav />
-
-      <Setting isOpen={isOpenSetting} onCloseOverlay={closeAllPopups} />
     </>
   );
 }

@@ -1,0 +1,6 @@
+.favorites__img {
+  height: 170%;
+  width: 170%;
+  object-position: -15px -15px;
+  object-fit: contain;
+}

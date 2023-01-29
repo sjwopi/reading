@@ -1,0 +1,11 @@
+.favorites {
+  max-width: 980px;
+  margin: 10px auto 20px auto;
+  height: 60px;
+}
+@media screen and (max-width: 600px) {
+  .favorites {
+    margin: 10px 5%;
+    height: 50px;
+  }
+}
