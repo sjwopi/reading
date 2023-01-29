@@ -2,25 +2,19 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import Profile from './user/Profile';
-import Setting from './popups/Setting';
 import Messenger from './messenger/Messenger';
 import Home from './home/Home';
 import Nav from './Nav';
 
 export default function App() {
-  const [isOpenSetting, setIsOpenSetting] = React.useState(false);
+  const [openedCard, setOpenedCard] = React.useState(null);
 
-  function handleOpenSetting() {
-    setIsOpenSetting(true);
+  function handleOpenCard(card) {
+    setOpenedCard(card);
   }
 
   function closeAllPopups() {
-    setIsOpenSetting(false);
-  }
-  function handleCloseOvwrlay(evt) {
-    if (evt.target.classList.contains('popup_opened')) {
-      closeAllPopups();
-    }
+    setOpenedCard(null);
   }
   return (
     <>
@@ -29,7 +23,7 @@ export default function App() {
           path="/profile"
           element={
             <>
-              <Profile onOpenSetting={handleOpenSetting} />
+              <Profile onOpenCard={handleOpenCard} />
               <Nav />
             </>
           }
@@ -47,7 +41,7 @@ export default function App() {
           path="/home"
           element={
             <>
-              <Home />
+              <Home onOpenCard={handleOpenCard} />
               <Nav />
             </>
           }
@@ -55,8 +49,6 @@ export default function App() {
         <Route path="/add-card" element={<></>} />
         <Route path="/edit-profile" element={<></>} />
       </Routes>
-
-      <Setting isOpen={isOpenSetting} onCloseOverlay={handleCloseOvwrlay} />
     </>
   );
 }

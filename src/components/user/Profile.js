@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
+import PopupWithSetting from './PopupWithSetting';
 import CardFromProfile from './CardFromProfile';
 
 import addButton from '../../img/add-btn.svg';
@@ -9,14 +10,24 @@ import defaultAvatar from '../../img/avatar.png';
 import { cards } from '../../utils/cards';
 import user from '../../utils/user';
 
-export default function Profile({ onOpenSetting }) {
-  
-  function onCardOpen(card) {
-    console.log(card)
+export default function Profile({onCardOpen}) {
+  const [isOpenSetting, setIsOpenSetting] = React.useState(false);
+
+  function handleOpenSetting() {
+    setIsOpenSetting(true);
+  }
+
+  function closeAllPopups() {
+    setIsOpenSetting(false);
+  }
+  function handleCloseOverlay(evt) {
+    if (evt.target.classList.contains('popup_opened')) {
+      closeAllPopups();
+    }
   }
   return (
     <>
-      <Header onClick={onOpenSetting} />
+      <Header onClick={handleOpenSetting} />
       <section className="user">
         <div className="user__avatar-btn">
           <img src={defaultAvatar} alt="аватарка" className="user__avatar" />
@@ -28,7 +39,7 @@ export default function Profile({ onOpenSetting }) {
           </div>
           <ul className="user__description">
             <li>
-              <p className="user__description-title">Прочтенных книг: <span className='user__description-title_info'>{user.countBook}</span></p>
+              <p className="user__description-title">Прочитанных книг: <span className='user__description-title_info'>{user.countBook}</span></p>
               <p className="user__description-title">Любимый автор: <span className='user__description-title_info'>{user.favoriteAuthor}</span></p>
               <p className="user__description-title">Любимая книга: <span className='user__description-title_info'>{user.favoriteBook}</span></p>
             </li>
@@ -57,7 +68,7 @@ export default function Profile({ onOpenSetting }) {
           ))}
         </ul>
       </section>
-
+      <PopupWithSetting isOpen={isOpenSetting} onCloseOverlay={handleCloseOverlay} />
     </>
   );
 }

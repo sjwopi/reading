@@ -86,13 +86,13 @@ const favoritesCards = [
     author: 'Не Стивен Кинг',
   },
   {
-    _id: 'ddd',
+    _id: 'ssss',
     img: foto4,
     name: 'Дракула',
     author: 'Не Стивен Кинг',
   },
   {
-    _id: 'fff',
+    _id: 'dddd',
     img: foto5,
     name: 'Дракула',
     author: 'Не Стивен Кинг',

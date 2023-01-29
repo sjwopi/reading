@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Setting({isOpen, onCloseOverlay}) {
+export default function PopupWithSetting({isOpen, onCloseOverlay}) {
   return (
     <div
       className={`popup ` + (isOpen && 'popup_opened')}

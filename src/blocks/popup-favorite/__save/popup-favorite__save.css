@@ -1,0 +1,13 @@
+.popup-favorite__save {
+  border: none;
+  width: 70%;
+  height: 40px;
+  margin: 0 15%;
+  border-radius: 10px;
+  font-weight: 700;
+  color: black;
+  background-color: white;
+}
+.popup-favorite__save:hover {
+  color: rgba(0, 0, 0, 0.7);
+}

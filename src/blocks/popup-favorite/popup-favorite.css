@@ -1,0 +1,6 @@
+.popup-favorite_opened {
+  background-color: rgba(0, 0, 0, 0.8);
+  visibility: visible;
+  opacity: 1;
+  transition: visibility .2s, opacity 0.2s linear;
+}

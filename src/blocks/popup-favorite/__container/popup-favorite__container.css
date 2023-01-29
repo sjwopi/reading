@@ -1,0 +1,21 @@
+.popup-favorite__container {
+  margin: 50px auto 0 auto;
+  width: 30%;
+  height: 70vh;
+  position: relative;
+}
+@media screen and (max-width: 1400px) {
+  .popup-favorite__container {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .popup-favorite__container {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .popup-favorite__container {
+    width: 85%;
+  }
+}

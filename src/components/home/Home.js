@@ -1,7 +1,19 @@
+import React from 'react';
 import Favorites from './Favourites';
+import PopupWithFavorite from './PopupWithFavorite';
+
 export default function Home() {
-  function onCardOpen(card) {
-    console.log(card);
+  const [selectedCard, setSelectedCard] = React.useState(null);
+
+  function handleOpenFavorite(card) {
+    console.log(card)
+    setSelectedCard(card)
   }
-  return <Favorites onCardOpen={onCardOpen} />;
+
+  return (
+    <>
+      <Favorites onCardOpen={handleOpenFavorite} />
+      <PopupWithFavorite card={selectedCard} />
+    </>
+  );
 }

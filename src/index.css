@@ -45,3 +45,10 @@
 @import url(./blocks/favorites/__item/favorites__item.css);
 @import url(./blocks/favorites/__img/favorites__img.css);
 @import url(./blocks/favorites/__line/favorites__line.css);
+
+@import url(./blocks/popup-favorite/popup-favorite.css);
+@import url(./blocks/popup-favorite/__container/popup-favorite__container.css);
+@import url(./blocks/popup-favorite/__name/popup-favorite__name.css);
+@import url(./blocks/popup-favorite/__author/popup-favorite__author.css);
+@import url(./blocks/popup-favorite/__img/popup-favorite__img.css);
+@import url(./blocks/popup-favorite/__save/popup-favorite__save.css);
