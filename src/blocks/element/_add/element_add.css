@@ -1,6 +1,7 @@
 .element_add {
   cursor: pointer;
   text-decoration: none;
+  min-height: 110px;
   padding: 20% 8% 0 8%;
   background-color: var(--color-light);
   box-shadow: 0 0 20px  rgba(80, 80, 80, 0.3) inset;
