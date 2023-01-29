@@ -6,14 +6,21 @@ export default function Home() {
   const [selectedCard, setSelectedCard] = React.useState(null);
 
   function handleOpenFavorite(card) {
-    console.log(card)
-    setSelectedCard(card)
+    setSelectedCard(card);
   }
 
+  function closeAllPopups() {
+    setSelectedCard(null);
+  }
+  function handleCloseOverlay(evt) {
+    if (evt.target.classList.contains('popup_opened')) {
+      closeAllPopups();
+    }
+  }
   return (
     <>
       <Favorites onCardOpen={handleOpenFavorite} />
-      <PopupWithFavorite card={selectedCard} />
+      <PopupWithFavorite card={selectedCard} onClose={closeAllPopups} onCloseOverlay={handleCloseOverlay} />
     </>
   );
 }
