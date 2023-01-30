@@ -1,8 +1,9 @@
 import React from 'react';
 import Favorites from './Favourites';
+import FeedOfPosts from './FeedOfPosts';
 import PopupWithFavorite from './PopupWithFavorite';
 
-export default function Home() {
+export default function Home({cards}) {
   const [selectedCard, setSelectedCard] = React.useState(null);
 
   function handleOpenFavorite(card) {
@@ -20,6 +21,7 @@ export default function Home() {
   return (
     <>
       <Favorites onCardOpen={handleOpenFavorite} />
+      <FeedOfPosts cards={cards} />
       <PopupWithFavorite card={selectedCard} onClose={closeAllPopups} onCloseOverlay={handleCloseOverlay} />
     </>
   );

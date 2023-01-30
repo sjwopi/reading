@@ -1,0 +1,21 @@
+.post {
+  max-width: 980px;
+  margin: 20px auto 0 auto;
+  max-height: 700px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.post:last-child {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 600px) {
+  .post {
+    max-width: 95%;
+  }
+}
+.swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  background-color: white;
+}

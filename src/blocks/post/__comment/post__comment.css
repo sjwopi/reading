@@ -1,0 +1,8 @@
+.post__comment {
+  min-height: 25px;
+  width: 30px;
+  border: none;
+  background-color: none;
+  background: url(../../../img/comment.png) center/cover no-repeat;
+  filter: invert(0.15);
+}

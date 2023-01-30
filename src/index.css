@@ -46,6 +46,23 @@
 @import url(./blocks/favorites/__img/favorites__img.css);
 @import url(./blocks/favorites/__line/favorites__line.css);
 
+@import url(./blocks/feed/feed.css);
+@import url(./blocks/post/post.css);
+@import url(./blocks/post/__avatar/post__avatar.css);
+@import url(./blocks/post/__book-author/post__book-author.css);
+@import url(./blocks/post/__book-name/post__book-name.css);
+@import url(./blocks/post/__btn-container/post__btn-container.css);
+@import url(./blocks/post/__caption/post__caption.css);
+@import url(./blocks/post/__comment/post__comment.css);
+@import url(./blocks/post/__count/post__count.css);
+@import url(./blocks/post/__img/post__img.css);
+@import url(./blocks/post/__item/post__item.css);
+@import url(./blocks/post/__like/post__like.css);
+@import url(./blocks/post/__owner/post__owner.css);
+@import url(./blocks/post/__owner-name/post__owner-name.css);
+@import url(./blocks/post/__save-favorite/post__save-favorite.css);
+@import url(./blocks/post/__text/post__text.css);
+
 @import url(./blocks/popup-favorite/popup-favorite.css);
 @import url(./blocks/popup-favorite/__container/popup-favorite__container.css);
 @import url(./blocks/popup-favorite/__name/popup-favorite__name.css);

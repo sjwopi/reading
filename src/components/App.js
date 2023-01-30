@@ -6,24 +6,22 @@ import Messenger from './messenger/Messenger';
 import Home from './home/Home';
 import Nav from './Nav';
 
+import { cards } from '../utils/cards';
+
 export default function App() {
-  const [openedCard, setOpenedCard] = React.useState(null);
+  const [cardsAll, setCardsAll] = React.useState(cards);
 
-  function handleOpenCard(card) {
-    setOpenedCard(card);
-  }
-
-  function closeAllPopups() {
-    setOpenedCard(null);
+  function handleAddNewCard(newCard) {
+    setCardsAll([newCard, ...cardsAll])
   }
   return (
     <>
       <Routes>
         <Route
-          path="/profile"
+          path="/"
           element={
             <>
-              <Profile onOpenCard={handleOpenCard} />
+              <Profile />
               <Nav />
             </>
           }
@@ -41,7 +39,7 @@ export default function App() {
           path="/home"
           element={
             <>
-              <Home onOpenCard={handleOpenCard} />
+              <Home cards={cardsAll} />
               <Nav />
             </>
           }

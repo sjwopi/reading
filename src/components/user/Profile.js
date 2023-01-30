@@ -12,11 +12,10 @@ import user from '../../utils/user';
 
 export default function Profile({onCardOpen}) {
   const [isOpenSetting, setIsOpenSetting] = React.useState(false);
-
+  
   function handleOpenSetting() {
     setIsOpenSetting(true);
   }
-
   function closeAllPopups() {
     setIsOpenSetting(false);
   }
